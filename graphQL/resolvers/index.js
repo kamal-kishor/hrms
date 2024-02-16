@@ -24,10 +24,10 @@ function generateToken(user) {
 
 export const resolvers = {
   Query: {
-    serverStatus: () => {
+    default: () => {
       return "Server is running smoothly!";
     },
-    
+
     async getEmpDetails() {
       try {
         const empDetail = await EmployeeDetails.find().sort({ timeStemp: -1 });
