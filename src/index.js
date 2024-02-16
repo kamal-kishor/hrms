@@ -17,7 +17,7 @@ const startServer = async () => {
     await mongoose.connect(process.env.MONGODB);
     console.log(`🚀 MongoDB Connected`);
 
-    const { url } = await server.listen({ port: 4040 });
+    const { url } = await server.listen({ port: 8080 });
     console.log(`🚀 Server Running at ${url}`);
 
     // const { url(server, {

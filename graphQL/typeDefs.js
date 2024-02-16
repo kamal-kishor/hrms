@@ -125,6 +125,7 @@ export const typeDefs = gql`
 
   type Query {
     getEmpDetails: [EmpDetails]
+    serverStatus: String!
   }
 
   type Mutation {

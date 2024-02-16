@@ -24,6 +24,10 @@ function generateToken(user) {
 
 export const resolvers = {
   Query: {
+    serverStatus: () => {
+      return "Server is running smoothly!";
+    },
+    
     async getEmpDetails() {
       try {
         const empDetail = await EmployeeDetails.find().sort({ timeStemp: -1 });
