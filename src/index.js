@@ -19,12 +19,6 @@ const startServer = async () => {
 
     const { url } = await server.listen({ port: 8080 });
     console.log(`🚀 Server Running at ${url}`);
-
-    // const { url(server, {
-    //   listen: { port: 4000 },
-    // }); } = await startStandaloneServer
-
-    // console.log(`🚀  Server ready at: ${url}`);
   } catch (error) {
     console.error("Error: ", error.message);
   }
