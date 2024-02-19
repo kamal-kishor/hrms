@@ -94,6 +94,7 @@ export const resolvers = {
         const uuid = uuidv4();
         const timestampPart = uuid.slice(0, 8);
         const currentDate = new Date();
+
         const formattedDate = `${currentDate.getFullYear()}${(
           currentDate.getMonth() + 1
         )

@@ -47,26 +47,6 @@ const validateRegisterInput = (
     errors.dateOfJoining = "Invalid date format for date of joining";
   }
 
-  if (contactNumber.trim() === "") {
-    errors.contactNumber = "Contact number must not be empty";
-  } else if (
-    !validator.isMobilePhone(contactNumber, "any", { strictMode: false })
-  ) {
-    errors.contactNumber = "Invalid contact number";
-  }
-
-  if (jobTitle.trim() === "") {
-    errors.jobTitle = "Job title must not be empty";
-  }
-
-  if (department.trim() === "") {
-    errors.department = "Department must not be empty";
-  }
-
-  if (!validator.isISO8601(dateOfJoining, { strict: true })) {
-    errors.dateOfJoining = "Invalid date format for date of joining";
-  }
-
   return { errors, valid: Object.keys(errors).length < 1 };
 };
 
